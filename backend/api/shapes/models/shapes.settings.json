@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shapes",
+  "info": {
+    "name": "shapes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "xml": {
+      "type": "text"
+    },
+    "styles": {
+      "via": "shape",
+      "collection": "styles"
+    }
+  }
+}

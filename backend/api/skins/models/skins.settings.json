@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skins",
+  "info": {
+    "name": "skins",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "head",
+        "body"
+      ],
+      "required": true
+    },
+    "textures": {
+      "via": "skins",
+      "collection": "textures",
+      "dominant": true
+    }
+  }
+}

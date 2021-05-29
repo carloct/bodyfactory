@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "styles",
+  "info": {
+    "name": "styles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "avatar": {
+      "type": "string"
+    },
+    "items_list": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "head": {
+      "model": "heads",
+      "via": "styles"
+    },
+    "body": {
+      "model": "bodies",
+      "via": "styles"
+    },
+    "shape": {
+      "model": "shapes",
+      "via": "styles"
+    },
+    "items": {
+      "collection": "items",
+      "via": "styles",
+      "dominant": true
+    }
+  }
+}

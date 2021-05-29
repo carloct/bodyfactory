@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "textures",
+  "info": {
+    "name": "textures",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "file": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "head",
+        "upper",
+        "lower"
+      ]
+    },
+    "uuid": {
+      "type": "string",
+      "unique": true
+    },
+    "skins": {
+      "via": "textures",
+      "collection": "skins"
+    }
+  }
+}
